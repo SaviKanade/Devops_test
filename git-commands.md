@@ -41,3 +41,23 @@ git log - It shows all the information regarding your repo such as who has commi
 
 
 **************************************************************************************************************************************************
+Branching commands :
+
+git branch - Lists all the branches.
+            $ git branch
+
+Create a new branch.
+            $ git branch feature-1
+
+Switch between branches.
+            $ git switch feature-1 
+
+Create a new branch and switch to it in a single command.
+            $ git checkout -b feature-2
+
+Delete a branch.
+            $ git branch -D feature-2
+
+
+
+**************************************************************************************************************************************************
