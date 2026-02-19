@@ -61,3 +61,23 @@ Delete a branch.
 
 
 **************************************************************************************************************************************************
+Git Remote Workflow Commands :
+
+git clone - You can clone the new remote repository to your local.
+            $ git clone remote_https_url
+
+git push - It uploads your local commits to a remote repository (like GitHub).
+            $ git push origin main
+
+git remote - It shows the remote repositories connected to your local Git repo.
+            $ git remote -v
+
+git pull - It downloads changes from a remote repository and merges them into your current branch.
+            $ git pull origin main
+
+git fetch - It downloads changes from the remote repository but does NOT merge them into your current branch.
+            $ git fetch
+
+
+
+**************************************************************************************************************************************************
