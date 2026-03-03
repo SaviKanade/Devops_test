@@ -1,0 +1,23 @@
+#This is the hello workflow
+name: hello workflow
+
+#when this workflow will run. SO, basically whenever you push these listed branches it will run this workflow.
+on:
+  push:
+    branches: [main]
+
+
+# These are the jobs inside a workflow
+jobs:
+
+#Name of a job
+  greet:
+  # Github runner (github gives its own server where you can run your steps). Each job runs on a runner.
+    runs-on: ubuntu-latest
+    steps: 
+    - name: greeting
+      run: echo "Hello "
+
+    - name: say hello to username
+      run: echo "hello $USER"
+    
