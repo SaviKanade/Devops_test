@@ -1,0 +1,26 @@
+name: cicd pipeline
+
+
+on: workflow_dispatch
+
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Developer code task
+        run: echo "Developer code"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build the code 
+        run: echo "COde build"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the code
+        run: echo "COde deploy"
+
+  
