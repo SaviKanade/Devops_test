@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       environment:
+        description: This is enviornment values where this workflow runs
         default: 'dev'
         required: true
-        description: This is enviornment values where this workflow runs
         type: choice
         options:
           - dev
