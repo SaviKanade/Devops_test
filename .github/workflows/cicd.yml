@@ -28,6 +28,12 @@ jobs:
         run: echo "COde build"
 
   deploy:
+  # It will deploy only when u enter 'dev' in inputs option. If you give prod it won't deploy it.
+    if: inputs.environment == 'dev'
+  # It will only run when code & build job executes successfully
+    needs:
+      - code
+      - build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy the code
