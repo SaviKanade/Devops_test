@@ -3,8 +3,7 @@ name: hello workflow
 
 #when this workflow will run. SO, basically whenever you push these listed branches it will run this workflow.
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 
 # These are the jobs inside a workflow
@@ -23,6 +22,8 @@ jobs:
       run: echo "hello $USER"
 
   details:
+  # Below line shows the dependency of details job as it depends on greet job. Means it says 1st execute greet job then only execute my steps.
+    needs: greet
     runs-on: ubuntu-latest
     steps:
       - name: show what all versions we use for python,docker
